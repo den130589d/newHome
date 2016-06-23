@@ -3,3 +3,12 @@
 	font-size: @fsize;
 	color: @fcolor; 
 }
+
+.inline-block(@va: top){
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.iconBack(@iconName){
+	background: url(~"@{pathToIcon}icon@{iconName}.png") no-repeat center; 
+}
