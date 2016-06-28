@@ -12,3 +12,36 @@
 .iconBack(@iconName){
 	background: url(~"@{pathToIcon}icon@{iconName}.png") no-repeat center; 
 }
+
+//grid start
+.generate-columns(@max-width; @number-cols; @i: 1) when (@i =< @number-cols) {
+
+  
+
+  .s@{i} {
+  	@single-width: @max-width / @number-cols;
+    width: @i * @single-width;
+    padding-left: @phone-cell-padding;  
+  }
+  @media screen and (min-width: @tablet-width){
+  .m@{i} {
+  	@single-width: @max-width / @number-cols;
+    width: @i * @single-width;
+    padding-left: @tablet-cell-padding;
+  }
+    
+  }
+  @media screen and (min-width: @full-width){
+  .l@{i} {
+  	@single-width: @max-width / @number-cols;
+    width: @i * @single-width;
+    padding-left: @full-cell-padding;  
+  }
+  }
+  
+  .generate-columns(@max-width; @number-cols; @i + 1);
+
+}
+
+.generate-columns(@max-width, @number-cols);
+//grid final

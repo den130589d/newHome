@@ -3,14 +3,21 @@
 	width: 100%;
 	box-sizing: border-box;
 	height: 75px;
-	//padding-top: 17px;
 	background-color: @baseColor;
 	color: @whiteColor;
 	.button-menu{
-		float: left;
+		//float: left;
+		.inline-block;
+		position: relative;
+		top: 25%;
+		left: 5px;
 		height: 26px;
 		width: 30px;
 		padding: 6px 0;
+		@media screen and (min-width: @tablet-width){
+			left: 12px;
+		}
+		
 		@media screen and (min-width: @full-width){
 			display: none;
 		}
@@ -23,6 +30,7 @@
 	}
 	&-actions{
 		float: right;
+		line-height: 75px;
 	}
 	.logo{
 		position: absolute;
@@ -30,7 +38,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		@media screen and (min-width: @full-width){
-			left: 0;
+			left: 15px;
 			transform: translate(0, -50%);
 		}
 

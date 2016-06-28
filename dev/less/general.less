@@ -8,3 +8,33 @@ a{
 	text-decoration: inherit;
 }
 @import "imports/header";
+
+
+.container{
+	padding: 0 5px 0 5px;
+	height: inherit;
+
+	@media screen and (min-width: @tablet-width){
+		width: @tablet-width;
+		margin: 0 auto;
+		padding: 0 10px 0 10px;
+	}
+	@media screen and (min-width: @full-width){
+		position: relative;
+		width: @full-width;
+		
+		padding: 0 15px 0 15px;
+	}
+}
+
+.col{
+	float: left;
+}
+
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+
+}
+
