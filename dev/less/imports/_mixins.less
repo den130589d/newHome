@@ -14,34 +14,11 @@
 }
 
 //grid start
-.generate-columns(@max-width; @number-cols; @i: 1) when (@i =< @number-cols) {
+.grid(@name, @pad, @columnNum: 1) when (@columnNum <= @columnCount) {
+  .@{name}-@{columnNum}{
+    width: 100% / @columnCount * @columnNum;
+    padding: 0 @pad;
+  }
 
-  
-
-  .s@{i} {
-  	@single-width: @max-width / @number-cols;
-    width: @i * @single-width;
-    padding-left: @phone-cell-padding;  
-  }
-  @media screen and (min-width: @tablet-width){
-  .m@{i} {
-  	@single-width: @max-width / @number-cols;
-    width: @i * @single-width;
-    padding-left: @tablet-cell-padding;
-  }
-    
-  }
-  @media screen and (min-width: @full-width){
-  .l@{i} {
-  	@single-width: @max-width / @number-cols;
-    width: @i * @single-width;
-    padding-left: @full-cell-padding;  
-  }
-  }
-  
-  .generate-columns(@max-width; @number-cols; @i + 1);
-
+  .grid(@name, @pad, @columnNum + 1);
 }
-
-.generate-columns(@max-width, @number-cols);
-//grid final
