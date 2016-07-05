@@ -1,0 +1,95 @@
+.img-cover{
+	width: 80%;
+	max-height: 492px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+	@media screen and (min-width: @tablet-width){
+		width: 30%;
+		max-height: 205px;
+		float: left;
+		margin-right: 25px;
+	}
+	
+	@media screen and (min-width: @full-width){
+		width: 100%;
+		max-height: 266px;
+		margin-right: 0;
+	}
+	img{
+		width: 100%;
+
+	}
+
+	
+
+}
+
+.p1{
+		font-size: @companySlogan;
+		font-family: @medium-fontFamily;
+		text-align: center;
+		
+		@media screen and (min-width: @tablet-width){
+			font-size: @companyDescr;
+			
+			
+		}
+		@media screen and (min-width: @full-width){
+			text-align: center;
+			
+		}
+
+}
+.p2{
+		font-size: @buttom-fontSize;
+		text-align: center;
+		
+		@media screen and (min-width: @tablet-width){
+			font-size: 16px;
+			
+		}
+		@media screen and (min-width: @full-width){
+			text-align: center;
+		}
+
+}
+.p3{
+	font-size: @buttom-fontSize;
+	text-align: left;
+	margin-bottom: 20px;
+	
+}
+.section-hot{
+	padding-top: 29px;
+}
+
+#btn-hot{
+	margin-bottom: 20px;
+}
+
+.text-hot{
+	position: relative;
+	line-height: 30px;
+	@media screen and (max-width: @tablet-width){
+			margin-bottom: 20px;
+		}
+	@media screen and (min-width: @tablet-width){
+			left: -18%;
+		}
+	@media screen and (min-width: @full-width){
+			left: 0;
+		}
+
+}
+
+.hot-all{
+	display: none;
+	
+	@media screen and (min-width: @tablet-width){
+			display: block;
+			text-align: right;
+		}
+
+}
