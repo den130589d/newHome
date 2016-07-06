@@ -28,13 +28,29 @@
   .grid(lg, @full-cell-padding);
 }
 
-@media screen and (min-width: @tablet-width){
+@media screen and (min-width: @phone-width){
 
+.offset-sm-1{
+	left:  100% / @columnCount * 1;
+ }
+ .offset-sm-3{
+	left:  100% / @columnCount * 3;
+ }
+ 
+}
+
+@media screen and (min-width: @tablet-width){
+.offset-md-0{
+	left:  0;
+ }
 .offset-md-1{
 	left:  100% / @columnCount * 1;
  }
  .offset-md-2{
 	left:  100% / @columnCount * 2;
+ }
+ .offset-md-3{
+	left:  100% / @columnCount * 3;
  }
 }
 

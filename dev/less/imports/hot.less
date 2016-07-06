@@ -1,9 +1,13 @@
-.img-cover{
+
+.img-cover-s{
 	width: 80%;
-	max-height: 492px;
+	
 	overflow: hidden;
 	margin: 0 auto;
 	margin-bottom: 20px;
+}
+.img-cover{
+	.img-cover-s;
 
 	@media screen and (min-width: @tablet-width){
 		width: 30%;
@@ -86,6 +90,9 @@
 
 .hot-all{
 	display: none;
+	color: #2e7cb0;
+	font-size: 18px;
+	font-family: @bold-fontFamily;
 	
 	@media screen and (min-width: @tablet-width){
 			display: block;
